@@ -36,13 +36,13 @@ A DAG possui uma única task, `t1`, que executa a função `data_cleaner()`. Ess
 
 ```mermaid
 flowchart TD
-    A[t1: data_cleaner] --> B[Ler Churn.csv]
-    B --> C[Renomear colunas]
-    C --> D[Preencher Salario nulo<br/>com a mediana]
-    D --> E[Preencher Genero nulo<br/>com 'Masculino']
-    E --> F[Corrigir Idade inválida<br/>&#40;&lt;0 ou &gt;120&#41; com a mediana]
-    F --> G[Remover duplicatas<br/>por Id]
-    G --> H[Salvar Churn_Clean.csv]
+    A["t1: data_cleaner"] --> B["Ler Churn.csv"]
+    B --> C["Renomear colunas"]
+    C --> D["Preencher Salario nulo<br/>com a mediana"]
+    D --> E["Preencher Genero nulo<br/>com 'Masculino'"]
+    E --> F["Corrigir Idade inválida<br/>(menor que 0 ou maior que 120) com a mediana"]
+    F --> G["Remover duplicatas<br/>por Id"]
+    G --> H["Salvar Churn_Clean.csv"]
 ```
 
 ## Operadores e bibliotecas utilizados
